@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.it86.pixelmatrixui.controller.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="de.it86.pixelmatrixui.controller.LEDPaneController">
+    <fx:define>
+        <ToggleGroup fx:id="modeToggleGroup"/>
+    </fx:define>
+    <children>
+        <ToolBar>
+            <items>
+                <Text text="Farbe:"/>
+                <ColorPicker fx:id="colorPicker"/>
+                <Separator/>
+                <ToggleButton text="D" toggleGroup="$modeToggleGroup" selected="true">
+                    <userData>
+                        <LEDPaneController.Mode fx:constant="Paint"/>
+                    </userData>
+                </ToggleButton>
+                <ToggleButton text="PF" toggleGroup="$modeToggleGroup">
+                    <userData>
+                        <LEDPaneController.Mode fx:constant="PipetteForeground"/>
+                    </userData>
+                </ToggleButton>
+                <ToggleButton text="PB" toggleGroup="$modeToggleGroup">
+                    <userData>
+                        <LEDPaneController.Mode fx:constant="PipetteBackground"/>
+                    </userData>
+                </ToggleButton>
+                <Separator/>
+                <ToggleButton fx:id="backgroundToggle" text="Hintergrund"/>
+            </items>
+        </ToolBar>
+        <ScrollPane>
+            <content>
+                <GridPane fx:id="gridPane" styleClass="led-matrix"/>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>

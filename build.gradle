@@ -1,0 +1,32 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'de.it86'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+javafx {
+    version = '15'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+//java {
+//    modularity.inferModulePath = true
+//}
+
+dependencies {
+    implementation 'org.json:json:20201115'
+}
+
+application {
+    mainModule = 'de.it86.pixelmatrixui'
+    mainClass = 'de.it86.pixelmatrixui.Main'
+}

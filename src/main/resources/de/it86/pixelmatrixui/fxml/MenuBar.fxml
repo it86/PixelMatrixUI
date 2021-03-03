@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<MenuBar xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="de.it86.pixelmatrixui.controller.MenuBarController">
+    <menus>
+        <Menu text="Datei">
+            <items>
+                <MenuItem text="Laden" onAction="#load"/>
+                <MenuItem text="Speichern" onAction="#save"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exportieren" onAction="#export"/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Beenden" onAction="#exit"/>
+            </items>
+        </Menu>
+        <Menu text="Bearbeiten">
+            <items>
+                <MenuItem text="Verschieben" onAction="#move"/>
+            </items>
+        </Menu>
+        <Menu text="Hintergrund">
+            <MenuItem text="Importieren" onAction="#importBackground"/>
+            <MenuItem text="Entfernen" onAction="#clearBackground"/>
+        </Menu>
+    </menus>
+</MenuBar>

@@ -1,0 +1,7 @@
+.led-matrix {
+    -fx-hgap: 2px;
+    -fx-vgap: 2px;
+    -fx-background-color: gray;
+    -fx-border-color: gray;
+    -fx-border-width: 2px;
+}

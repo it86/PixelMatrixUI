@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<TitledPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="de.it86.pixelmatrixui.controller.FrameViewController"
+            collapsible="false"
+            text="Frames">
+    <content>
+        <VBox>
+            <children>
+                <ToolBar>
+                    <items>
+                        <Button text="+" onAction="#addNewFrame"/>
+                        <Button text="C" onAction="#copyFrame"/>
+                        <Button text="-" onAction="#removeFrame"/>
+                        <Separator/>
+                        <Button text="Up" onAction="#moveUp"/>
+                        <Button text="Down" onAction="#moveDown"/>
+                    </items>
+                </ToolBar>
+                <ListView fx:id="list" items="${controller.frames}"/>
+            </children>
+        </VBox>
+    </content>
+</TitledPane>
+
